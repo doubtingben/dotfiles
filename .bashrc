@@ -26,11 +26,11 @@ case ${TERM} in
     ;;
 esac
 
-source $HOME/.local/bin/git-prompt.sh
+source ${HOME}/.local/bin/git-prompt.sh
 
 PS1="\$(__git_ps1 '(%s)')\[\e[0;32m\]\u\[\e[m\]@\h \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]\[\033[0m\]"
 
-PATH=$HOME/.local/bin/:${PATH}
+PATH=${HOME}/.local/bin/:${PATH}
 
 # some more ls aliases
 alias ls='ls --color=auto'
@@ -39,25 +39,9 @@ alias la='ls -A'
 alias l='ls -CF'
 
 export LANG="en_US.UTF-8"
-if [ ! -d $HOME/../virtualenvs ]; then
-  mkdir $HOME/../virtualenvs;
-fi
-export WORKON_HOME=$HOME/../virtualenvs
-if [ ! -d $HOME/../projects ]; then
-  mkdir $HOME/../projects;
-fi
-export PROJECT_HOME=$HOME/../projects
 
-if [ -f $HOME/.local/bin/virtualenvwrapper.sh ]; then
-  source $HOME/.local/bin/virtualenvwrapper.sh;
-fi
-
-if [ -f $HOME/.bashrc.local ]; then
-  source $HOME/.bashrc.local;
-fi
-
-if [ -z "$STY" ]; then
-exec screen -dR
+if [ -f ${HOME}/.bashrc.local ]; then
+  source ${HOME}/.bashrc.local;
 fi
 
 export HISTTIMEFORMAT="%s "
