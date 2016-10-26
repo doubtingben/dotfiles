@@ -5,3 +5,4 @@ xterm*renderFont: true
 XTerm*faceSize: 10
 
 #include "/home/bnwilson/.Xresources.molokai"
+
