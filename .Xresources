@@ -1,0 +1,6 @@
+xterm*termName: xterm-256color
+xterm*metaSendsEscape: true
+XTerm*faceName: Liberation Mono
+XTerm*faceSize: 10
+
+#include "/home/bnwilson/.Xresources.molokai"
