@@ -21,4 +21,4 @@ PS1="$PS1 \n$ "
 # Add extra line before new prompt
 PS1="\n$PS1"
 
-
+alias ls="ls --color"
