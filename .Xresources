@@ -1,6 +1,6 @@
 xterm*termName: xterm-256color
 xterm*metaSendsEscape: true
-xterm*font: -*-terminus-medium-r-normal--18-*-*-*-*-*-iso10646-1
+xterm*faceName: VeraMono
 xterm*renderFont: true
 xterm*faceSize: 10
 xterm*saveLines: 8192
