@@ -22,3 +22,5 @@ PS1="$PS1 \n$ "
 PS1="\n$PS1"
 
 alias ls="ls --color"
+
+export PATH=${HOME}/.local/bin/:${PATH}
