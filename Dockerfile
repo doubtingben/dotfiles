@@ -1,3 +1,4 @@
 FROM nginx:1.11
+MAINTAINER 
 
 EXPOSE 80
