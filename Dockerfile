@@ -1,4 +1,4 @@
 FROM nginx:1.11
-MAINTAINER 
+MAINTAINER "Ben Wilson" <doubtingben@gmail.com>
 
 EXPOSE 80
