@@ -6,4 +6,4 @@ xterm*faceSize: 10
 xterm*saveLines: 8192
 xterm*selectToClipboard: false
 
-#include "/home/bnwilson/.Xresources.molokai"
+#include ".Xresources.molokai"
