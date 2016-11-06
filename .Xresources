@@ -2,8 +2,8 @@ xterm*termName: xterm-256color
 xterm*metaSendsEscape: true
 xterm*faceName: VeraMono
 xterm*renderFont: true
-xterm*faceSize: 10
+xterm*faceSize: 16
 xterm*saveLines: 8192
-xterm*selectToClipboard: false
+xterm*selectToClipboard: true
 
 #include ".Xresources.molokai"

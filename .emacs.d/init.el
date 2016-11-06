@@ -1,4 +1,6 @@
 
+(add-to-list 'load-path "~/.emacs.d/modes/")
+
 (menu-bar-mode -1)
 (show-paren-mode 1)
 (setq scroll-step 1) ;; keyboard scroll one line at a time
@@ -23,3 +25,7 @@
  )
 
 (load-theme 'monokai t)
+
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
