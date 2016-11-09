@@ -29,3 +29,23 @@
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+
+(add-hook 'python-mode-hook
+  (function (lambda ()
+    (setq indent-tabs-mode nil
+          tab-width 4))))
+
+(custom-set-variables
+ '(python-guess-indent nil)
+  '(python-indent 4))
+
+(defun xterm-title-update ()
+  (interactive)
+  (send-string-to-terminal (concat "\033]1; " (buffer-name) "\007"))
+  (if buffer-file-name
+      (send-string-to-terminal (concat "\033]2; " (buffer-file-name) "\007"))
+    (send-string-to-terminal (concat "\033]2; " (buffer-name) "\007"))))
+
+  (add-hook 'post-command-hook 'xterm-title-update)
