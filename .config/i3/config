@@ -17,7 +17,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:VeraMono 8
+font pango:VeraMono 12
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -113,7 +113,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym Mod1+Print exec screenshot.sh
+bindsym $mod+Shift+p exec ~/.local/bin/screenshot.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -151,13 +151,14 @@ bar {
 # class                 border  backgr. text    indicator child_border
 client.focused          #2BA84A #2BA84A #ffffff #FCFFFC   #285577
 client.focused_inactive #000000 #000000 #ffffff #484e50   #5f676a
-client.unfocused        #040F0F #040F0F #888888 #292d2e   #222222
+client.unfocused        #333333 #333333 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
 exec --no-startup-id xsetroot -solid "#333333"
+exec --no-startup-id xrdb -load ~/.Xresources
 
 # i3-gaps config
 set $mode_gaps Gaps: (o) outer, (i) inner
@@ -197,3 +198,4 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
+for_window [class="^.*"] border pixel 1
