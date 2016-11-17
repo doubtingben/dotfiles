@@ -24,3 +24,7 @@ PS1="\n$PS1"
 alias ls="ls --color"
 
 export PATH=${HOME}/.local/bin/:${PATH}
+export EDITOR=vim
+
+shopt -s histappend
+PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND"
