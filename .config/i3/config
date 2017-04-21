@@ -17,7 +17,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:VeraMono 12
+font pango:VeraMono 8
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -149,7 +149,7 @@ bar {
 }
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #2BA84A #2BA84A #ffffff #FCFFFC   #285577
+client.focused          #2BA84A #2BA84A #ffffff #a8a12b   #a8a12b
 client.focused_inactive #000000 #000000 #ffffff #484e50   #5f676a
 client.unfocused        #333333 #333333 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000

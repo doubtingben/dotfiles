@@ -4,6 +4,6 @@ xterm*faceName: VeraMono
 xterm*renderFont: true
 xterm*faceSize: 10
 xterm*saveLines: 18384
-xterm*selectToClipboard: true
+#xterm*selectToClipboard: true
 
 #include ".Xresources.molokai"
