@@ -26,5 +26,11 @@ alias ls="ls --color"
 export PATH=${HOME}/.local/bin/:${PATH}
 export EDITOR=vim
 
-shopt -s histappend
-PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND"
+export GOROOT=${HOME}/go1.8.3
+export PATH=${GOROOT}/bin:${PATH}
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/bwilson/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/home/bwilson/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/bwilson/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/home/bwilson/Downloads/google-cloud-sdk/completion.bash.inc'; fi
