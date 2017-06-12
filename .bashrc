@@ -47,3 +47,5 @@ if [ -f '/home/bnwilson/google-cloud-sdk/path.bash.inc' ]; then source '/home/bn
 if [ -f '/home/bnwilson/google-cloud-sdk/completion.bash.inc' ]; then source '/home/bnwilson/google-cloud-sdk/completion.bash.inc'; fi
 
 export PATH=${PATH}:${HOME}/google-cloud-sdk/bin
+
+export ANSIBLE_VAULT_PASSWORD_FILE=${HOME}/.ansible_vault
