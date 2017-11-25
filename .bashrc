@@ -28,3 +28,9 @@ export EDITOR=vim
 
 shopt -s histappend
 PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/bwilson/gcloud/google-cloud-sdk/path.bash.inc' ]; then source '/home/bwilson/gcloud/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/bwilson/gcloud/google-cloud-sdk/completion.bash.inc' ]; then source '/home/bwilson/gcloud/google-cloud-sdk/completion.bash.inc'; fi
