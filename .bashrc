@@ -35,6 +35,8 @@ if [ -f '/home/bwilson/gcloud/google-cloud-sdk/path.bash.inc' ]; then source '/h
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/bwilson/gcloud/google-cloud-sdk/completion.bash.inc' ]; then source '/home/bwilson/gcloud/google-cloud-sdk/completion.bash.inc'; fi
 
-export GOROOT=${HOME}/go1.8.3
+export GOROOT=${HOME}/go1.9.2
 export PATH=${GOROOT}/bin:${PATH}
+export GOPATH=${HOME}/go
+export PATH=${GOPATH}/bin:${PATH}
 
