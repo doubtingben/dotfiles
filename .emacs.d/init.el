@@ -26,6 +26,16 @@
 
 (load-theme 'monokai t)
 
+(require 'package)
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")))
+(package-initialize)
+
+(add-to-list 'load-path "~/.emacs.d/repos/neotree")
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+(setq neo-smart-open t)
+
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
@@ -58,3 +68,5 @@
  kept-new-versions 6
  kept-old-versions 2
     version-control t)       ; use versioned backups
+
+(load "~/.emacs.d/init/golang.el")
