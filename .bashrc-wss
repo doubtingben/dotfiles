@@ -1,0 +1,6 @@
+export ANSIBLE_SSH_CONTROL_PATH='/dev/shm/%%h-%%r'
+
+export GPGKEY=0A449354
+
+export ANSIBLE_VAULT_PASSWORD_FILE=${HOME}/.ansible_vault
+
