@@ -27,6 +27,7 @@ export PATH=${HOME}/.local/bin/:${PATH}
 export EDITOR=vim
 
 export GOROOT=${HOME}/go1.8.3
+export GOPATH=${HOME}/go
 export PATH=${GOROOT}/bin:${PATH}
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -34,3 +35,6 @@ if [ -f '/home/bwilson/Downloads/google-cloud-sdk/path.bash.inc' ]; then source 
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/bwilson/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/home/bwilson/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+export NVM_DIR="/home/bwilson/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
