@@ -15,7 +15,6 @@ PS1="\n$PS1"
 
 alias ls="ls --color"
 
-export PATH=${HOME}/.local/bin/:${PATH}
 export EDITOR=vim
 
 shopt -s histappend
@@ -31,7 +30,8 @@ export PATH=${GOROOT}/bin:${PATH}
 export GOPATH=${HOME}/go
 export PATH=${GOPATH}/bin:${PATH}
 
-if [[ $(nc -z gitlab.clarkinc.biz 443 2>/dev/null) ]];then
+if [[ ! $(nc -z gitlab.clarkinc.biz 443 2>/dev/null) ]];then
   source ${HOME}/.bashrc-wss
 fi
 
+export PATH=${HOME}/.local/bin/:${PATH}
