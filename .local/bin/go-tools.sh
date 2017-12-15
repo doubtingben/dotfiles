@@ -8,6 +8,7 @@ declare -a GOLANG_TOOLS=("golang.org/x/tools/cmd/..."
                         "golang.org/x/tools/cmd/goimports"
                         "golang.org/x/tools/cmd/guru"
                         "github.com/dougm/goflymake"
+			"github.com/golang/dep/cmd/dep"
                        )
 
 for tool in ${GOLANG_TOOLS[@]}; do
