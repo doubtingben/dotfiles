@@ -160,6 +160,7 @@ client.background       #ffffff
 exec --no-startup-id xsetroot -solid "#333333"
 exec --no-startup-id xrdb -load ~/.Xresources
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec --no-startup-id ~/.local/bin/screenlayout.sh
 
 # i3-gaps config
 set $mode_gaps Gaps: (o) outer, (i) inner
