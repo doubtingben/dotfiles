@@ -30,7 +30,7 @@ export PATH=${GOROOT}/bin:${PATH}
 export GOPATH=${HOME}/go
 export PATH=${GOPATH}/bin:${PATH}
 
-if [[ ! $(nc -z gitlab.clarkinc.biz 443) ]];then
+if [[ ! $(nc -z gitlab.clarkinc.biz 443 2>/dev/null) ]];then
   source ${HOME}/.bashrc-wss
 fi
 
