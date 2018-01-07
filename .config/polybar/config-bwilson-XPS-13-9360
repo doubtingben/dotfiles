@@ -9,7 +9,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+background = #333333
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -34,7 +34,7 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 4
+border-size = 0
 border-color = #00000000
 
 padding-left = 0
@@ -43,13 +43,13 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
-font-2 = VeraMono:pixelsize=10;1
+font-0 = fixed:pixelsize=16;1
+font-1 = unifont:fontformat=truetype:size=16:antialias=false;0
+font-2 = VeraMono:pixelsize=16;1
 
-modules-left = i3
-modules-center = 
-modules-right = memory cpu wlan eth date 
+modules-left = i3 
+modules-center = memory cpu 
+modules-right = wlan battery date time
 
 tray-position = right
 tray-padding = 2
@@ -170,12 +170,12 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = net1
+interface = wlp58s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
-label-connected = %essid%
+label-connected = %essid% %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -192,11 +192,10 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = eth0
+interface = wlp58s0
 interval = 3.0
 
 format-connected-underline = #55aa55
-format-connected-prefix = "eth0 "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
@@ -206,12 +205,9 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-[module/date]
+[module/time]
 type = internal/date
 interval = 5
-
-date =
-date-alt = " %Y-%m-%d"
 
 time = %I:%M %p
 time-alt = %H:%M:%S
@@ -219,7 +215,18 @@ time-alt = %H:%M:%S
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
-label = %date% %time%
+label = %time%
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = " %Y-%m-%d"
+
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #0a6cf5
+
+label = %date%
 
 [module/battery]
 type = internal/battery
