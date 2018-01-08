@@ -10,11 +10,11 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 set -ex
 
 # set sizes
-if [[ "$(hostname)" == "bwilson-XPS-13-9360" ]];then
-  echo "bwilson-XPS-13-9360 polybar!"
-  polybar --config=${HOME}/.config/polybar/config-bwilson-XPS-13-9360  example &
+if [[ -f ${HOME}/.config/polybar/config-$(hostname) ]];then
+  echo "Loading config-$(hostname)!"
+  polybar --config=${HOME}/.config/polybar/config-$(hostname)  example &
 else
-  echo "default polybar!"
+  echo "Loading default polybar!"
   polybar example &
 fi
 
