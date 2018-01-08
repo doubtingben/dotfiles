@@ -4,3 +4,5 @@ export GPGKEY=0A449354
 
 export ANSIBLE_VAULT_PASSWORD_FILE=${HOME}/.ansible_vault
 
+export PATH=${PATH}:${HOME}/google-cloud-sdk/bin
+
