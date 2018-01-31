@@ -2,7 +2,7 @@ export ANSIBLE_SSH_CONTROL_PATH='/dev/shm/%%h-%%r'
 
 export GPGKEY=0A449354
 
-export ANSIBLE_VAULT_PASSWORD_FILE=${HOME}/.ansible_vault
+export ANSIBLE_VAULT_IDENTITY_LIST=${HOME}/.ansible_vault
 
 export PATH=${PATH}:${HOME}/google-cloud-sdk/bin
 
