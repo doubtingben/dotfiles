@@ -204,4 +204,7 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
+gaps outer 0
+gaps inner 10
+
 for_window [class="^.*"] border pixel 1
