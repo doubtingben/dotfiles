@@ -21,13 +21,7 @@ shopt -s histappend
 HISTSIZE=50000
 HISTFILESIZE=100000
 PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/bwilson/gcloud/google-cloud-sdk/path.bash.inc' ]; then source '/home/bwilson/gcloud/google-cloud-sdk/path.bash.inc'; fi
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/bwilson/gcloud/google-cloud-sdk/completion.bash.inc' ]; then source '/home/bwilson/gcloud/google-cloud-sdk/completion.bash.inc'; fi
-
-export GOROOT=${HOME}/go1.9.2
+export GOROOT=${HOME}/go1.11.4
 export PATH=${GOROOT}/bin:${PATH}
 export GOPATH=${HOME}/go
 export PATH=${GOPATH}/bin:${PATH}
@@ -37,3 +31,12 @@ if [[ ! $(nc -z gitlab.clarkinc.biz 443 2>/dev/null) ]];then
 fi
 
 export PATH=${HOME}/.local/bin/:${PATH}
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/bwilson/google-cloud-sdk/path.bash.inc' ]; then . '/home/bwilson/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/bwilson/google-cloud-sdk/completion.bash.inc' ]; then . '/home/bwilson/google-cloud-sdk/completion.bash.inc'; fi
+
+if [ -f '/home/bwilson/.local/share/pass.bash-completion' ]; then . '/home/bwilson/.local/share/pass.bash-completion'; fi
+
