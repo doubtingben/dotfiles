@@ -155,7 +155,7 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+    status_command 2>/tmp/i3blocks.err /home/bwilson/.local/bin/i3blocks -vvv -c /home/bwilson/.config/i3blocks/config | tee /tmp/i3blocks.out
 
     colors {
         statusline #ffffff

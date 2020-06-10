@@ -1,0 +1,88 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+#command=$SCRIPT_DIR/$BLOCK_NAME
+command=/home/bwilson/.config/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+[sway-focusedwindow]
+command=/home/bwilson/.config/i3blocks/sway-focusedwindow/sway-focusedwindow 100 center
+interval=persist
+
+# Memory usage
+#
+# The type defaults to "mem" if the instance is not specified.
+[memory]
+label=MEM
+separator=false
+interval=30
+command=/home/bwilson/.config/i3blocks/memory/memory
+
+# Battery indicator
+#
+# The battery instance defaults to 0.
+[battery]
+label=bat:
+#label=⚡
+interval=5
+markup=pango
+min_width=bat: ■■■■■
+command=/home/bwilson/.config/i3blocks/batterybar/batterybar
+
+# Date Time
+#
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=5
+
+# Temperature
+#
+# Support multiple chips, though lm-sensors.
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+#[temperature]
+#label=TEMP
+#interval=10
+
+# Key indicators
+#
+# Add the following bindings to i3 config file:
+#
+# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+#[keyindicator]
+#KEY=CAPS
+#markup=pango
+#interval=once
+#signal=11
+
+#[keyindicator]
+#KEY=NUM
+#markup=pango
+#interval=once
+#signal=11
