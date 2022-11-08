@@ -21,14 +21,9 @@ shopt -s histappend
 HISTSIZE=50000
 HISTFILESIZE=100000
 PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND"
-export GOROOT=${HOME}/go1.11.4
 export PATH=${GOROOT}/bin:${PATH}
 export GOPATH=${HOME}/go
 export PATH=${GOPATH}/bin:${PATH}
-
-if [[ ! $(nc -z gitlab.clarkinc.biz 443 2>/dev/null) ]];then
-  source ${HOME}/.bashrc-wss
-fi
 
 export PATH=${HOME}/.local/bin/:${PATH}
 
@@ -40,3 +35,12 @@ if [ -f '~/google-cloud-sdk/completion.bash.inc' ]; then . '/home/bwilson/google
 
 if [ -f '~/.local/share/pass.bash-completion' ]; then . '/home/bwilson/.local/share/pass.bash-completion'; fi
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pnpm
+export PNPM_HOME="/Users/bwilson/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
